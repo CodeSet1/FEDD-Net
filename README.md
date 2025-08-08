@@ -1,4 +1,4 @@
-# FEDD-Net: A frequency-enhanced dual-branch diffusion network for low-light image enhancement
+# FEDD-Net: a frequency-enhanced dual-branch diffusion network for low-light image enhancement
 ### [Paper]() | [Code](https://github.com/CodeSet1/GDRD-Net)
 
 This code is provided solely for academic research purposes and is exclusively restricted from any commercial use.
