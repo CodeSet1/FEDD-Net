@@ -10,7 +10,7 @@ import os
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--config', type=str, default='config/RDA_val.json',
+    parser.add_argument('-c', '--config', type=str, default='config/HDR_val.json',
                         help='JSON file for configuration')
     parser.add_argument('-p', '--phase', type=str, choices=['val'], help='val(generation)', default='val')
     parser.add_argument('-gpu', '--gpu_ids', type=str, default=None)
