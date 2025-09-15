@@ -13,16 +13,16 @@
     },
     "datasets": {
         "train": {
-            "name": "RDR_train",
-            "dataroot": "./dataset/RDR_data/train",
+            "name": "HDR_train",
+            "dataroot": "./dataset/HDR_data/train",
             "batch_size": 24,   //24
             "num_workers": 8,  //24
             "use_shuffle": true,
             "data_len": -1
         },
         "val": {
-            "name": "RDR_test",
-            "dataroot": "./dataset/RDR_data/eval",
+            "name": "HDR_test",
+            "dataroot": "./dataset/HDR_data/eval",
             "data_len": -1
         }
     },
@@ -77,4 +77,5 @@
             "lr": 1e-4
         }
     }
+
 }
