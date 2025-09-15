@@ -30,7 +30,7 @@ If you want to test only, you should list your dataset as the followed rule:
 ```
 
 ## 3. Pretrain Weights
-The pretrain weight is at [Baidu Drive](https://pan.baidu.com/s/1EUGgDSsXebBygtw0yniTMA) (code: LD07). Please place it in the 'experience' directory of the 'DTCWT', 'RDR' and 'IDA' folders in the folder.
+The pretrain weight is at [Baidu Drive](https://pan.baidu.com/s/1EUGgDSsXebBygtw0yniTMA) (code: LD07). Please place it in the 'experience' directory of the 'DTCWT', 'HDR' and 'LDA' folders in the folder.
 
 ## 4. Testing
 For low-light image enhancement testing, you need to modify the data path in the `config/gdrdnet_val.json` file, and then you can use the following command:
