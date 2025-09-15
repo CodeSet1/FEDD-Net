@@ -1,5 +1,5 @@
 {
-    "name": "Diff_Retinex_val",
+    "name": "FEDD-Net_val",
     "phase": "val", // not use in infer
     "gpu_ids": [
         0
@@ -16,4 +16,5 @@
             "data_len": -1
         }
     }
+
 }
