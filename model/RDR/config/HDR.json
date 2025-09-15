@@ -1,5 +1,5 @@
 {
-    "name": "RDA",
+    "name": "HDR",
     "phase": "train",
     "gpu_ids": [
         0, 1
@@ -79,3 +79,4 @@
     }
 
 }
+
