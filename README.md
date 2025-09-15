@@ -1,4 +1,4 @@
-# FEDD-Net: a frequency-enhanced dual-branch diffusion network for low-light image enhancement
+# FEDD-Net: a frequency diagonal feature enhanced dual-branch diffusion network for low-light image enhancement
 ### [Paper]() | [Code](https://github.com/CodeSet1/GDRD-Net)
 
 This code is provided solely for academic research purposes and is exclusively restricted from any commercial use.
@@ -45,20 +45,20 @@ If the dataset is unpaired, please keep at least the same number and size of ima
 **We found differences in the test results between machines equipped with RTX 3090 and RTX 4090. We recommend using only the RTX 3090 for testing to achieve the original performance. If you want to verify whether your results reflect the original performance, you can refer to the `results`.**
 
 ## 5. Train
-If you need to train, you should train DTCWT, RDR, and IDA step by step. The training code is integrated into the `model` folder.
+If you need to train, you should train DTCWT, HDR, and LDA step by step. The training code is integrated into the `model` folder.
 
-### Training the TDN
+### Training the Encoder
 You need to modify the dataset path for training in `model/DTCWT/train_decom.py`, and then you can use the following command:
 ```shell
-# For TDN training
+# For DTCWT Frequency decomposition
 python train_decom.py
 ```
 
-### Training the RDR
-Based on the weights trained for DTCWT, decompose the images from both the training set and the validation set, and organize the corresponding reflection maps dataset as follows:
+### Training the HDR
+Based on the weights trained for DTCWT, decompose the images from both the training set and the validation set, and organize the corresponding high-frequency maps dataset as follows:
 ```bash
     dataset/
-        RDR_data/
+        HDR_data/
             train/
                 high/
                 low/
@@ -66,18 +66,18 @@ Based on the weights trained for DTCWT, decompose the images from both the train
                 high/
                 low/
 ```
-You need to modify the dataset path for training in `model/RDR/config` of RDR, and then you can use the following command:
+You need to modify the dataset path for training in `model/HDR/config` of HDR, and then you can use the following command:
 ```shell
-# For RDR training
-python train_rdr.py
+# For HDR training
+python train_hdr.py
 ```
 
-### Training the IDA
-Based on the weights trained for DTCWT, decompose the images from both the training set and the validation set, and organize the corresponding illumination maps dataset as follows:
-(Additionally, you need to place the ground truth images of normal light in the `gt/` folder and the reflectance maps restored from low light using RDR in the `R/` folder.)
+### Training the LDA
+Based on the weights trained for DTCWT, decompose the images from both the training set and the validation set, and organize the corresponding low-frequency maps dataset as follows:
+(Additionally, you need to place the ground truth images of normal light in the `gt/` folder and the low-frequency maps restored from low light using HDR in the folder.)
 ```bash
     dataset/
-        IDA_data/
+        LDA_data/
             train/
                 gt/
                 R/
@@ -89,9 +89,9 @@ Based on the weights trained for DTCWT, decompose the images from both the train
                 high/
                 low/
 ```
-You need to modify the dataset path for training in `model/IDA/config` of IDA, and then you can use the following command:
+You need to modify the dataset path for training in `model/LDA/config` of LDA, and then you can use the following command:
 ```shell
-# For IDA training
-python train_ida.py
+# For LDA training
+python train_lda.py
 ```
  
