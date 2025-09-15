@@ -10,7 +10,7 @@ conda env create -f environment.yaml
 ```
 - Activate Conda Environment
 ```
-conda activate gdrd_net_env
+conda activate fedd_net_env
 ```
 We strongly recommend using the configurations provided in the yaml file, as different versions of dependency packages may produce varying results.
 
