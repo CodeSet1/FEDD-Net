@@ -1,5 +1,5 @@
 {
-    "name": "IDA",
+    "name": "LDA",
     "phase": "train",
     "gpu_ids": [
         0
@@ -13,16 +13,16 @@
     },
     "datasets": {
         "train": {
-            "name": "IDA_train",
-            "dataroot": "./dataset/IDA_data/train",
+            "name": "LDA_train",
+            "dataroot": "./dataset/LDA_data/train",
             "batch_size": 24,       
             "num_workers": 8,
             "use_shuffle": true,
             "data_len": -1
         },
         "val": {
-            "name": "IDA_test",
-            "dataroot": "./dataset/IDA_data/eval",
+            "name": "LDA_test",
+            "dataroot": "./dataset/LDA_data/eval",
             "data_len": -1
         }
     },
@@ -77,4 +77,5 @@
             "lr": 1e-4
         }
     }
+
 }
