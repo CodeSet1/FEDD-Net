@@ -1,4 +1,4 @@
-name: gdrd_net_env
+name: fedd_net_env
 channels:
   - defaults
   - pytorch
