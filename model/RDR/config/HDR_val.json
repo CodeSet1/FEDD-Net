@@ -1,5 +1,5 @@
 {
-    "name": "RDR-val",
+    "name": "HDR-val",
     "phase": "val",
     "gpu_ids": [
         0
@@ -9,20 +9,20 @@
         "tb_logger": "tb_logger",
         "results": "results",
         "checkpoint": "checkpoint",
-        "resume_state":  "weights/best" //model/RDR/weights/best for integration test
+        "resume_state":  "weights/best" //model/HDR/weights/best for integration test
     },
     "datasets": {
         "train": {
-            "name": "RDR_train",
-            "dataroot": "dataset/LOL_RDR_data/train",
+            "name": "HDR_train",
+            "dataroot": "dataset/LOL_HDR_data/train",
             "batch_size": 16,
             "num_workers": 16,
             "use_shuffle": true,
             "data_len": -1
         },
         "val": {
-            "name": "RDR_test",
-            "dataroot": "dataset/LOL_RDR_data/test",
+            "name": "HDR_test",
+            "dataroot": "dataset/LOL_HDR_data/test",
             "data_len": -1
         }
     },
@@ -76,4 +76,5 @@
             "lr": 2e-6
         }
     }
+
 }
